@@ -17,6 +17,15 @@
     "app10-e2e": {
       "tags": [],
       "implicitDependencies": ["app10"]
+    },
+    "material": {
+      "tags": []
+    },
+    "ui-login": {
+      "tags": []
+    },
+    "core-auth": {
+      "tags": []
     }
   }
 }
