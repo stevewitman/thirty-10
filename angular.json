@@ -244,6 +244,37 @@
           "styleext": "scss"
         }
       }
+    },
+    "ui-notifications": {
+      "projectType": "library",
+      "root": "libs/ui-notifications",
+      "sourceRoot": "libs/ui-notifications/src",
+      "prefix": "ui",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui-notifications/tsconfig.lib.json",
+              "libs/ui-notifications/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/ui-notifications/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ui-notifications/jest.config.js",
+            "tsConfig": "libs/ui-notifications/tsconfig.spec.json",
+            "setupFile": "libs/ui-notifications/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {

@@ -29,6 +29,9 @@
     },
     "core-data": {
       "tags": []
+    },
+    "ui-notifications": {
+      "tags": []
     }
   }
 }

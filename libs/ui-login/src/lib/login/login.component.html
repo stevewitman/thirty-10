@@ -11,7 +11,8 @@
             type="text"
             formControlName="email"
             autocomplete="email"
-            placeholder="Email">
+						placeholder="Email">
+					<mat-hint>email: victor@avila.com</mat-hint>
           <mat-error *ngIf="email.invalid && email.touched">
             Email does not look right
           </mat-error>
@@ -22,7 +23,8 @@
             type="text"
             formControlName="password"
             autocomplete="password"
-            placeholder="Password">
+						placeholder="Password">
+					<mat-hint>password: pass</mat-hint>
           <mat-error *ngIf="password.invalid && password.touched">
             Password must be at least 4 characters
           </mat-error>

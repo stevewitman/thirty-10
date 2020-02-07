@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 import { ProjectsService, Project } from '@nx10/core-data';
+import { NotificationsService } from '@nx10/ui-notifications';
 @Component({
   selector: 'nx10-projects',
   templateUrl: './projects.component.html',
@@ -11,10 +12,12 @@ export class ProjectsComponent implements OnInit {
 	projects$;
 	selectedProject: Project;
 	form: FormGroup;
+	message: string;
 
   constructor(
 		private projectsService: ProjectsService,
-		private formBuilder: FormBuilder
+		private formBuilder: FormBuilder,
+		private notificationsService: NotificationsService
 	) { }
 
   ngOnInit() {
@@ -53,6 +56,8 @@ export class ProjectsComponent implements OnInit {
 			this.getProjects();
 			this.resetProject();
 		})
+		this.message = project.title + ' updated.';
+		this.notificationsService.notification(this.message);
 	}
 
 	createProject(project) {
@@ -61,6 +66,8 @@ export class ProjectsComponent implements OnInit {
 			this.getProjects();
 			this.resetProject();
 		})
+		this.message = project.title + ' created.';
+		this.notificationsService.notification(this.message);
 	}
 
 	resetProject() {
@@ -82,6 +89,8 @@ export class ProjectsComponent implements OnInit {
 		.subscribe(result => {
 			this.getProjects();
 		});
+		this.message = project.title + ' deleted.';
+		this.notificationsService.notification(this.message);
 	}
 
 }

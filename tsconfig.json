@@ -19,7 +19,8 @@
       "@nx10/material": ["libs/material/src/index.ts"],
       "@nx10/ui-login": ["libs/ui-login/src/index.ts"],
       "@nx10/core-auth": ["libs/core-auth/src/index.ts"],
-      "@nx10/core-data": ["libs/core-data/src/index.ts"]
+      "@nx10/core-data": ["libs/core-data/src/index.ts"],
+      "@nx10/ui-notifications": ["libs/ui-notifications/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
