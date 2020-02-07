@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { MaterialModule } from '@nx10/material';
@@ -29,7 +30,8 @@ import { ProjectComponent } from './projects/project/project.component';
     BrowserAnimationsModule,
     CoreAuthModule,
     HttpClientModule,
-    MaterialModule,
+		MaterialModule,
+		ReactiveFormsModule,
     UiLoginModule
   ],
   bootstrap: [AppComponent]

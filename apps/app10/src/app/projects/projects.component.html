@@ -8,6 +8,9 @@
 	<div class="column">
 	<nx10-project-detail
 		[project]="selectedProject"
+		[form]="form"
+		(saved)="saveProject($event)"
+		(cancelled)="cancel()"
 	></nx10-project-detail>
 	</div>
 </div>

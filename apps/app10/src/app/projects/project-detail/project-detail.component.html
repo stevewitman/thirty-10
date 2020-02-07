@@ -3,11 +3,31 @@
 		<mat-card-title>Project Details</mat-card-title>
 	</mat-card-header>
 	<mat-card-content>
-		<form>
-			<p>{{currentProject.id}}</p>
-			<p>{{currentProject.title}}</p>
-			<p>{{currentProject.detail}}</p>
-			<p>{{currentProject.importanceLevel}}</p>
+		<form [formGroup]="form" (submit)="onSubmit()">
+			<div>
+				<mat-form-field class="full-width">
+					<input
+					matInput
+					type="text"
+					placeholder="Title"
+					name="title"
+					formControlName="title">
+				</mat-form-field>
+				<mat-form-field class="full-width">
+					<input
+						matInput
+						type="text"
+						placeholder="Details"
+						name="details"
+						formControlName="details">
+				</mat-form-field>
+			</div>
+			<div align="end">
+				<mat-card-actions>
+					<button mat-raised-button type="button" (click)="onClear()">Clear</button>
+					<button mat-raised-button color="primary" [disabled]="form.invalid">Save</button>
+				</mat-card-actions>
+			</div>
 		</form>
 	</mat-card-content>
  </mat-card>
