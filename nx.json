@@ -26,6 +26,9 @@
     },
     "core-auth": {
       "tags": []
+    },
+    "core-data": {
+      "tags": []
     }
   }
 }

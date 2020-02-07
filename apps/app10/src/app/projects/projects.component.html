@@ -1,1 +1,13 @@
-<p>projects works!</p>
+<div class="row">
+	<div class="column">
+		<nx10-projects-list
+			[projects]="projects$ | async"
+			(selected)="selectProject($event)"
+		></nx10-projects-list>
+	</div>
+	<div class="column">
+	<nx10-project-detail
+		[project]="selectedProject"
+	></nx10-project-detail>
+	</div>
+</div>

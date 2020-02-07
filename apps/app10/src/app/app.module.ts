@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
@@ -11,13 +10,18 @@ import { ProjectsComponent } from './projects/projects.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { UiLoginModule } from '@nx10/ui-login';
 import { CoreAuthModule } from '@nx10/core-auth';
-import { AuthInterceptor } from '@nx10/core-auth';
+import { ProjectsListComponent } from './projects/projects-list/projects-list.component';
+import { ProjectDetailComponent } from './projects/project-detail/project-detail.component';
+import { ProjectComponent } from './projects/project/project.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProjectsComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ProjectsListComponent,
+    ProjectDetailComponent,
+    ProjectComponent
   ],
   imports: [
     AppRoutingModule,
