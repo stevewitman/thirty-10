@@ -3,6 +3,7 @@
 		<nx10-projects-list
 			[projects]="projects$ | async"
 			(selected)="selectProject($event)"
+			(deleted)="deleteProject($event)"
 		></nx10-projects-list>
 	</div>
 	<div class="column">

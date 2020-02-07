@@ -77,4 +77,11 @@ export class ProjectsComponent implements OnInit {
 		this.resetProject();
 	}
 
+	deleteProject(project) {
+		this.projectsService.deleteProject(project.id)
+		.subscribe(result => {
+			this.getProjects();
+		});
+	}
+
 }

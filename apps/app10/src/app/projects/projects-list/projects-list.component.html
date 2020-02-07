@@ -13,6 +13,15 @@
 				<div align="end">
 					<button
 						mat-icon-button
+						color="warn"
+						*ngIf="!readOnly"
+						(click)="deleted.emit(project);$event.stopImmediatePropagation()">
+						<mat-icon>close</mat-icon>
+					</button>
+				</div>
+				<div align="end">
+					<button
+						mat-icon-button
 						(click)="$event.stopImmediatePropagation()"
 						[routerLink]="['/projects', project.id]">
 						<mat-icon>more_vert</mat-icon>
