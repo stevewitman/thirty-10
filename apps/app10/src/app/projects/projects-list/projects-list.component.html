@@ -22,9 +22,7 @@
 				<div align="end">
 					<button
 						mat-icon-button
-						(click)="$event.stopImmediatePropagation()"
-						[routerLink]="['/projects', project.id]">
-						<mat-icon>more_vert</mat-icon>
+						(click)="onShow(project); $event.stopImmediatePropagation()">						<mat-icon>more_vert</mat-icon>
 					</button>
 				</div>
 			</mat-list-item>
